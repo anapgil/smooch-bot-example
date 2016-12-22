@@ -10,13 +10,13 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi! I\'m Smooch Bot!')
+            return bot.say('¡Hola soy el Bot de Konfio!')
                 .then(() => 'askName');
         }
     },
 
     askName: {
-        prompt: (bot) => bot.say('What\'s your name?'),
+        prompt: (bot) => bot.say('¿Cómo te llamas?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
